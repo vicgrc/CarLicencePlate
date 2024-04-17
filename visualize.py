@@ -24,10 +24,10 @@ def draw_border(img, top_left, bottom_right, color=(0, 255, 0), thickness=10, li
     return img
 
 
-results = pd.read_csv('/Users/victorg/Documents/coursYnov/Majeur6DL/filRouge/automatic-number-plate-recognition-python-yolov8/results.csv')
+results = pd.read_csv('./results.csv')
 
 # load video
-video_path = 'caca.mp4'
+video_path = './Vid2.mp4'
 cap = cv2.VideoCapture(video_path)
 
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Specify the codec

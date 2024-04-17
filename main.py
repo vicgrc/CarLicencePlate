@@ -11,11 +11,11 @@ results = {}
 mot_tracker = Sort()
 
 # load models
-coco_model = YOLO('/Users/victorg/Documents/coursYnov/Majeur6DL/filRouge/automatic-number-plate-recognition-python-yolov8/models/yolov8n.pt')
-license_plate_detector = YOLO('/Users/victorg/Documents/coursYnov/Majeur6DL/filRouge/automatic-number-plate-recognition-python-yolov8/models/best.pt')
+coco_model = YOLO('./models/yolov8n.pt')
+license_plate_detector = YOLO('./models/best.pt')
 
 # load video
-cap = cv2.VideoCapture('/Users/victorg/Documents/coursYnov/Majeur6DL/filRouge/automatic-number-plate-recognition-python-yolov8/Vid2.mp4')
+cap = cv2.VideoCapture('./Vid2.mp4')
 
 vehicles = [2, 3, 5, 7]
 
@@ -73,4 +73,4 @@ while ret:
                                                                     'text_score': license_plate_text_score}}
 
 # write results
-        write_csv(results, '/Users/victorg/Documents/coursYnov/Majeur6DL/filRouge/automatic-number-plate-recognition-python-yolov8/results.csv')
+        write_csv(results, './results.csv')
